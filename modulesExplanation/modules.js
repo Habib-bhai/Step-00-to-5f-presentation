@@ -18,15 +18,15 @@ exports.hello = hello;
 //_____________________________________________________________________________________
 //  There are multiple ways of creating exportable functions, objs, array, variables etc.
 // 1. EXPORTING BY NAME
-var car = {
+let car = {
     type: "superCar",
     name: "bugatti Chiron"
 };
 exports.car = car;
-var CarCompany = "Lamborghini";
+let CarCompany = "Lamborghini";
 exports.CarCompany = CarCompany;
 // 2. Default Export 
-var def = "Mein default export hunnnnnnnnnnnnnnn!";
+let def = "Mein default export hunnnnnnnnnnnnnnn!";
 exports.default = def;
 // is used when you have to export one primary value.
 // also when you don't want to use brackets in import and in export like we did in named export. LOL

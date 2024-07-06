@@ -12,7 +12,7 @@ let fruitOrQuantity = 5;
 // length("We are studying type Narrowing")
 // THE CORRECT VERSION AND USAGE OF TYPEOF KEYWORD
 function length(value) {
-    if (typeof value === "string") {
+    if (typeof value === "string") { // typeof also called type Guard according to documentation
         console.log(value.length);
     }
     else {
@@ -34,6 +34,16 @@ function cart(product) {
 // undefined: Indicates that a variable has been declared but not assigned a value.
 let val = null;
 let test = undefined;
-// Nullish Coalescing
-let result = test ?? val;
-console.log(result);
+// -------------------------------> TRUTHINESS <--------------------------------------
+// https://www.typescriptlang.org/docs/handbook/2/narrowing.html#truthiness-narrowing
+// function printLength(value: string | null | undefined) {
+//     if (value) { // Narrowing the type based on truthiness
+//       console.log("The value is:", value);
+//       console.log("The length is:", value.length); // Safe access
+//     } else {
+//       console.log("The value is null or undefined.");
+//     }
+//   }
+//   printLength("Hello");
+//   printLength(null);
+//   printLength(undefined);

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var practicalApplication_1 = require("./practicalApplication");
+const practicalApplication_1 = require("./practicalApplication");
 // hello()
 (0, practicalApplication_1.autheticator)();
 // There is a directory error
