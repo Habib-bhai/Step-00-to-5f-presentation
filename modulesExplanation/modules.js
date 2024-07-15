@@ -1,12 +1,12 @@
-"use strict";
 // Modules is nothing but a way to help us  organizing our code.
 // 2 Keywords Are used to implement modules in our code "IMPORT" & "EXPORT"
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CarCompany = exports.car = exports.hello = void 0;
-function hello() {
-    console.log("Hello! from MODULES");
+console.log("hello from modules!");
+let a = 5;
+let b = 10;
+export function hello() {
+    console.log(a + b);
 }
-exports.hello = hello;
+export let h = "hello";
 /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
@@ -22,11 +22,10 @@ let car = {
     type: "superCar",
     name: "bugatti Chiron"
 };
-exports.car = car;
 let CarCompany = "Lamborghini";
-exports.CarCompany = CarCompany;
+export { car, CarCompany };
 // 2. Default Export 
-let def = "Mein default export hunnnnnnnnnnnnnnn!";
-exports.default = def;
+// let favouriteFood = "burger ande wala"
+// export default  favouriteFood
 // is used when you have to export one primary value.
 // also when you don't want to use brackets in import and in export like we did in named export. LOL

@@ -1,8 +1,16 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const practicalApplication_1 = require("./practicalApplication");
-// hello()
-(0, practicalApplication_1.autheticator)();
+import * as mod from "./modules.js";
+import { autheticator } from "./practicalApplication.js";
+// console.log(gender);
+console.log(mod);
+let h1 = {
+    name: "habib",
+    gender: "male",
+    age: 18
+};
+let { age, gender } = h1;
+console.log(age, gender);
+autheticator();
+// console.log(favouriteFood);
 // There is a directory error
 // Reuseability
 // Explain the EcmaScript modules & commonJS by showing the old version code which in compiled in JS.

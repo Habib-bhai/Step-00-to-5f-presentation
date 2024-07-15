@@ -1,10 +1,19 @@
 // Modules is nothing but a way to help us  organizing our code.
 // 2 Keywords Are used to implement modules in our code "IMPORT" & "EXPORT"
+console.log("hello from modules!");
 
-export function hello() {
-    console.log("Hello! from MODULES");
-    
+let a = 5
+let b = 10
+
+
+export function Hello() {
+
+    console.log(a + b);
+        
 }
+
+
+export let h = "hello"
 
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -33,9 +42,9 @@ export {car, CarCompany}
 
 // 2. Default Export 
 
-let def = "Mein default export hunnnnnnnnnnnnnnn!"
+// let favouriteFood = "burger ande wala"
 
-export default def
+// export default  favouriteFood
 
 
 // is used when you have to export one primary value.

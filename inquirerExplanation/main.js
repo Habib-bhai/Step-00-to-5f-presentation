@@ -1,7 +1,10 @@
-"use strict";
 // Inquirer.js is a powerful library for creating interactive command-line interfaces (CLIs). It helps in collecting user inputs in a structured way
-Object.defineProperty(exports, "__esModule", { value: true });
-// import inquirer from "inquirer"
+import inquirer from "inquirer";
+const answer = await inquirer.prompt({
+    name: "userName",
+    type: "editor",
+    message: "Enter your password"
+});
 // show the path where type is any
 // How we will know that inquirer is installed?
 // SYNTAX & there important things to ask in every inquirer prompt (type, name, message)

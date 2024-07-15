@@ -1,6 +1,9 @@
 "use strict";
 // An object in TypeScript is a collection of properties, where each property has a name (or key) and a value. Objects can be used to group related data and functionality together.
-Object.defineProperty(exports, "__esModule", { value: true });
+let obj = {
+    "mein nahi bataon ga": "mat batao"
+};
+console.log(obj["mein nahi bataon ga"]);
 const person = {
     name: "Alice",
     age: 30,
