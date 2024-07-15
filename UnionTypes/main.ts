@@ -1,60 +1,31 @@
 // So, what are unions?
-// In simple words it is used to give choices in types.
+// In simple words it is used to give/get choices in types.
 
 let fruit: string = "Banana"
 
-
-let fruitOrQuantity: string | number = 5
-
-
-// ---------------------------------> TYPE NARROWING <----------------------------------
-
-// HERE IS A SPECIAL Scenario.......
-
-// function length(value : string | number){
-
-//     console.log(value.length)
-
-// }
-
-// length("We are studying type Narrowing")
-
-
-// THE CORRECT VERSION AND USAGE OF TYPEOF KEYWORD
-
-function length(value: string | number){
-    if(typeof value === "string"){        // typeof also called type Guard according to documentation
-        console.log(value.length);
-        
-    }
-
-    else {
-        console.log(value, "this is the number data");
-        
-    }
-}
-// length("we are studying type Narrowing")
-
-
-
+let fruitOrQuantity: string | number  = 89
 
 
 
 // --------------------------------------> LITERAL TYPES <-----------------------------------------------------
 
-// So, what is Literal at first place? val of variable.
+// So, what is Literal at first place? 
+// value of a variable is called LITERAL and it can be anything obj, array, function, string, boolean, num etc.
 
 
-// let naam: "Habib" = "TypeScript"
+//  When you give a literal( or value) as type then it is called "literal type"
+
 
 // PRACTICAL SCENARIO OF UNION LITERAL TYPES...
 
+// In this example, lets say I have a store where I sell the products below. So, I want that my user only select one of these Items, he/she doesn't get any other choice then these, in this type of scenario "literal types" will be useful
 function cart(product: "shirt" | "pants" | "Watches" | "Shoes"){
 
     console.log(product , "You wanna buy this");
     
 }
 
+cart("Watches")
 
 
 
@@ -72,7 +43,16 @@ function cart(product: "shirt" | "pants" | "Watches" | "Shoes"){
 
 let val: null = null 
 
-let test: undefined  = undefined
+
+
+function hello(){
+
+    return null
+    
+}
+
+// console.log(hello())
+
 
 
 
@@ -80,15 +60,33 @@ let test: undefined  = undefined
 
 // https://www.typescriptlang.org/docs/handbook/2/narrowing.html#truthiness-narrowing
 
-// function printLength(value: string | null | undefined) {
-//     if (value) { // Narrowing the type based on truthiness
-//       console.log("The value is:", value);
-//       console.log("The length is:", value.length); // Safe access
-//     } else {
-//       console.log("The value is null or undefined.");
-//     }
-//   }
-  
-//   printLength("Hello");
-//   printLength(null);
-//   printLength(undefined);
+// NOTE: Truthiness is "BEHAVIOR" of TS, it consider the following values as "false"
+
+
+// 0        //All these values are also called "falsy values"
+// NaN
+// "" 
+// 0n 
+// null
+// undefined
+// false
+
+
+//HERE IS A SIMPLE PROOF:
+
+let a = 0  //we will not be able to enter in the block of if statement, as we know that when the condition is false we are not able to enter in the if statement's body. Because the value in the variable is one of the above values which is considered false. 
+// Any value other than the above "falsy" values will be considered true.  
+// TRY PUTTING ANY OTHER VALUE IN THE VARIABLE TO VERIFY THAT THE ABOVE VALUES ARE CONSIDERED FALSE.
+
+
+
+if(a){
+
+    console.log("You have entered in the if block");
+    
+}
+
+
+
+
+
