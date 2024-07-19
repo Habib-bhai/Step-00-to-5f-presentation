@@ -92,18 +92,3 @@ type user = "standard" |"admin" | "paidUser" // we've defined a type alias which
 // }
 
 // greet("Admin")
-
-const scrambledArray = ["student", "of",true, 123, "am", "a", "GIAIC", "I"];
-
-scrambledArray.unshift(scrambledArray.pop() ?? " ", ...scrambledArray.splice(2,4).slice(-2) );
-
-let arr = ["am", "a"]
-
-console.log(scrambledArray.unshift("I", "am", "a"));
-
-
-// console.log(scrambledArray.splice() );
-
-// console.log(scrambledArray.pop());
-
-// console.log(scrambledArray.join(' '));
